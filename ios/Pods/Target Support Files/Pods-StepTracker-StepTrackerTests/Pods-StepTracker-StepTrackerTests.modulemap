@@ -1,0 +1,6 @@
+module Pods_StepTracker_StepTrackerTests {
+  umbrella header "Pods-StepTracker-StepTrackerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
