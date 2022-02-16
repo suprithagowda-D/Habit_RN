@@ -10,7 +10,7 @@ justifyContent: space-around;
 export const Button = styled.TouchableOpacity`
 width: 40%;
 borderColor: red;
-borderWidth: 2;
+borderWidth: 2px;
 padding: 10px;
 display: flex;
 justifyContent: center;

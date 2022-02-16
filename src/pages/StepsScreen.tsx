@@ -3,12 +3,9 @@ import {
   SafeAreaView} from 'react-native';
 import RNShake from 'react-native-shake';
 import Steps from '../components/Steps';
-import Icon from '../components/Steps';
 import {useSelector, useDispatch} from 'react-redux';
 import {increment,decrement} from '../store/stepSlice';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-
-import {OuterView,Title,Button,BtnText,StyledIcon,Header} from '../styles/index.style';
+import {OuterView,Button,BtnText,StyledIcon,Header} from '../styles/index.style';
 import { faShoePrints,faPersonRunning } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
@@ -22,7 +19,7 @@ const StepsScreen = ({navigation}: Props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (steps > 0 && steps % 5 == 0) {
+    if ( steps % 1000 === 0) {
     setPoints(points+100);
       navigation.navigate('Prize',{ points:points});
     }
