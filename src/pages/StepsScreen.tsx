@@ -38,9 +38,9 @@ const StepsScreen = ({navigation}: Props) => {
       <OuterView>
       <Header>Daily Step Tracker</Header>
       <StyledIcon icon={faPersonRunning} size={50}/>
-      <Steps steps={steps} title={'Today steps'} color={'green'}/>
+      <Steps steps={steps} title={'Today steps'} color={'green'} textColor={"black"}/>
         <StyledIcon icon={ faShoePrints } size={50} />
-        <Steps steps={remainingSteps} title={'Remainig steps'} color={'red'}/>
+        <Steps steps={remainingSteps} title={'Remainig steps'} color={'red'} textColor={"black"}/>
         {steps >= 5 && (
           <Button
            onPress={() => navigation.navigate('Prize')}>

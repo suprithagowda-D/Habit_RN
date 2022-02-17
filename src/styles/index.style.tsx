@@ -4,14 +4,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 export const ViewContainer = styled.View`
   height: 100%;
-  padding: 20px;
+  paddingTop: 20px;
    display: flex;
+   flexDirection:row;
   justifyContent: space-around;
+`;
+export const Account = styled.Text`
+  fontSize: 30px;
+  color:white;
+  alignItems: center;
+  margin:0 auto;
+  paddingTop:30%;
+  fontWeight:500;
+
 `;
 export const Button = styled.TouchableOpacity`
   width: 40%;
-  borderColor: red;
-  borderWidth: 2px;
+  elevation: 8;
+  backgroundColor:#10f3fe;
   padding: 10px;
   display: flex;
   justifyContent: center;
@@ -21,18 +31,19 @@ export const Button = styled.TouchableOpacity`
 
 export const BtnText = styled.Text`
   fontSize: 18px;
+  fontWeight:500;
   color: black;
 `;
 
 export const OuterView = styled.View`
   display: flex;
   height: 100%;
-  justifycontent: space-around;
+  justifyContent: space-around;
 `;
 export const Title = styled.Text`
-  fontsize: 25px;
+  fontSize: 25px;
   color: black;
-  textalign: center;
+  textAlign: center;
   top: 100px;
 `;
 export const Header = styled.Text`
@@ -44,29 +55,29 @@ export const Header = styled.Text`
 
 export const StyledIcon = styled(FontAwesomeIcon)`
   top: 20px;
-  marginleft: 40%;
+  marginLeft: 40%;
 `;
 export const Circle = styled.View`
   width: 200px;
   height: 200px;
-  borderradius: 100px;
-  // borderColor: red;
-  bordercolor: ${(props) => props.inputColor};
-  borderwidth: 3px;
-  justifycontent: center;
-  alignitems: center;
+  borderRadius: 100px;
+  borderColor: ${(props) => props.inputColor};
+  borderWidth: 3px;
+  justifyContent: center;
+  alignItems: center;
 `;
 export const SubTitle = styled.Text`
-  color: black;
-  textalign: center;
-  fontsize: 22px;
-  fontweight: 800;
+  color: ${(props) => props.textColor};
+  textAlign: center;
+  fontSize: 22px;
+  fontWeight: 800;
   padding: 20px;
-`;
+  textTransform: capitalize;`;
+
 export const StepsCount = styled.Text`
   color: black;
-  fontsize: 25px;
-  fontweight: 800;
+  fontSize: 25px;
+  fontWeight: 800;
 `;
 export const StyledScrollView = styled.ScrollView.attrs(() => ({
   contentContainerStyle: {
@@ -79,17 +90,18 @@ export const StyledScrollView = styled.ScrollView.attrs(() => ({
 export const IconCircle = styled.View`
   width: 20px;
   height: 20px;
-  borderradius: 10px;
-  borderwidth: 2px;
+  borderRadius: 10px;
+  borderWidth: 2px;
   bordercolor: "#1a0066";
   display: flex;
-  justifycontent: center;
-  alignitems: center;
+  justifyContent: center;
+  alignItems: center;
 `;
 
 export const CongImage = styled.Image`
-  width: 400px;
-  height: 450px;
+  width: 350px;
+  height: 400px;
+  align:center;
 `;
 ////Weather----->
 export const WeatherImage = styled.Image`
