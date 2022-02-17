@@ -18,8 +18,7 @@ const WeatherInfo: React.FC<Props> = ({currentWeatherDetails}) => {
   return (
     <WeatherInfoView>
             <City>{name}</City>
-
-            <WeatherIcon icon={faCloud} size={50}/>
+        <WeatherIcon icon={faCloud} size={50}/>
           <TextPrimary>{temp}°</TextPrimary>
             <WeatherDescription >{description}</WeatherDescription>
             <TextSecondary>{main}</TextSecondary>
