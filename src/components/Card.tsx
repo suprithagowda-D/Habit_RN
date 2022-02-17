@@ -9,6 +9,7 @@ type Props = {
 
 const Card = ({steps,route}: Props) => {
   const { points } = route.params;
+  console.log(route.params);
   return (
     <View>
       <SubTitle>Completed {steps} steps</SubTitle>

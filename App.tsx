@@ -14,6 +14,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Prize from './src/pages/Prize';
 import store from './src/store/store';
+import Home from './src/pages/Home';
+import Weather from './src/pages/Weather';
 import {Provider} from 'react-redux';
 
 const Stack = createNativeStackNavigator();
@@ -24,6 +26,11 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
+            component={Home}
+            // options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="StepsScreen"
             component={StepsScreen}
             // options={{headerShown: false}}
           />
@@ -31,6 +38,11 @@ const App = () => {
             name="Prize"
             component={Prize}
             options={{ title: 'Prize Screen' }}
+          />
+          <Stack.Screen
+            name="Weather"
+            component={Weather}
+            options={{ title: 'Weather' }}
           />
         </Stack.Navigator>
       </NavigationContainer>

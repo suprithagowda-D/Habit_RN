@@ -8,18 +8,19 @@ type Props = {
   route:any;
 };
 
-const Prize = ({navigation,route}: Props) => {
-  console.log("Prize",route.params);
-  const steps = useSelector(state => state.step.value);
+const Home = ({navigation}: Props) => {
   return (
     <ViewContainer>
-      <Card steps={steps} route={route} />
+     <Button
+        onPress={() => navigation.navigate('Weather')}>
+        <BtnText>Weather!</BtnText>
+      </Button>
       <Button
-        onPress={() => navigation.goBack()} >
-        <BtnText>Go Home!</BtnText>
+        onPress={() => navigation.navigate('StepsScreen')}>
+        <BtnText>Tracker!</BtnText>
       </Button>
     </ViewContainer>
   );
 };
 
-export default Prize;
+export default Home;

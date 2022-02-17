@@ -13,16 +13,18 @@ type Props = {
 };
 
 const StepsScreen = ({navigation}: Props) => {
-  const [points, setPoints] = useState<number>(0);
+  const [points, setPoints] = useState<number>(100);
   const steps = useSelector(state => state.step.value);
   const remainingSteps = useSelector(state => state.step.goal);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if ( steps % 1000 === 0) {
+    if ( steps%2 ===1) {
     setPoints(points+100);
       navigation.navigate('Prize',{ points:points});
+      setPoints(points+100);
     }
+
     const subscription = RNShake.addListener(() => {
       dispatch(increment());
       dispatch(decrement());
