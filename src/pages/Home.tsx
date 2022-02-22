@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button,ViewContainer,BtnText,Account} from '../styles/index.style';
-import { Text,ImageBackground} from "react-native";
+import {ImageBackground} from "react-native";
 
 type Props = {
   navigation: any;

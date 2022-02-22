@@ -17,9 +17,17 @@ import store from './src/store/store';
 import Home from './src/pages/Home';
 import Weather from './src/pages/Weather';
 import {Provider} from 'react-redux';
+import CheckConnection from './src/utilis/CheckConnetion';
+import ErrorCard from './src/components/ErrorCard';
+
+
 
 const Stack = createNativeStackNavigator();
 const App = () => {
+  let network = CheckConnection();
+  if (network === false) {
+    return <ErrorCard />;
+  }
   return (
     <Provider store={store}>
       <NavigationContainer>
