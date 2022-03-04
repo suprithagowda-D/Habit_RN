@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 
 export const ViewContainer = styled.View`
-  height: 100%;
-  paddingTop: 20px;
-   display: flex;
-   flexDirection:row;
-  justifyContent: space-around;
+  // height: 100%;
+  // paddingTop: 20px;
+  //  display: flex;
+  //  flexDirection:row;
+   justifyContent: space-around;
+  flex:1;
+  borderBottom:1px solid #66e0ff;
 `;
 export const Account = styled.Text`
   fontSize: 30px;
@@ -21,12 +23,13 @@ export const Account = styled.Text`
 export const Button = styled.TouchableOpacity`
   width: 40%;
   elevation: 8;
-  backgroundColor:#10f3fe;
+  backgroundColor:#ccf5ff;
   padding: 10px;
   display: flex;
   justifyContent: center;
   alignItems: center;
   alignSelf: center;
+  border:2px solid black;
 `;
 
 export const BtnText = styled.Text`
@@ -42,15 +45,18 @@ export const OuterView = styled.View`
 `;
 export const Title = styled.Text`
   fontSize: 25px;
-  color: black;
+  // color: black;
   textAlign: center;
   top: 100px;
+  color:blue;
+  fontWeight:700;
 `;
 export const Header = styled.Text`
   fontSize: 25px;
   textAlign: center;
   fontWeight: 800;
-  color: blue;
+  color: #005266;
+  top:10px;
 `;
 
 export const StyledIcon = styled(FontAwesomeIcon)`
@@ -58,9 +64,10 @@ export const StyledIcon = styled(FontAwesomeIcon)`
   marginLeft: 40%;
 `;
 export const Circle = styled.View`
-  width: 200px;
-  height: 200px;
-  borderRadius: 100px;
+  width: 150px;
+  height: 150px;
+  top:40px;
+  borderRadius: 50px;
   borderColor: ${(props) => props.inputColor};
   borderWidth: 3px;
   justifyContent: center;
@@ -154,7 +161,6 @@ export const TextPrimary = styled.Text`
 export const WeatherDetailsView = styled.View`
 flex: 1;
 margin:0 12px;
-
 `;
 export const SubText = styled.Text`
 color:blue;
@@ -185,7 +191,7 @@ justifyContent: flex-end;
 `;
 export const WeatherDetailsText = styled.Text`
 fontSize: 15px;
-        color:red;
+        color:#8C485E;
         fontWeight: 700;
         margin: 10px;
 `;

@@ -13,15 +13,13 @@ type Props = {
 
 const Steps: React.FC<Props> = ({steps,title,color,textColor}) => {
   return (
-    <SafeAreaView>
-      <StatusBar />
+
       <StyledScrollView>
-      <SubTitle textColor={textColor} >{title}</SubTitle>
         <Circle inputColor={color} >
           <StepsCount>{steps}</StepsCount>
         </Circle>
       </StyledScrollView>
-    </SafeAreaView>
+
   );
 };
 

@@ -15,11 +15,10 @@ type Props = {
 const StepsScreen = ({navigation}: Props) => {
   const [points, setPoints] = useState<number>(100);
   const steps = useSelector(state => state.step.value);
-  const remainingSteps = useSelector(state => state.step.goal);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if ( steps%2 ===1) {
+    if ( steps%2 ===0) {
     setPoints(points+100);
       navigation.navigate('Prize',{ points:points});
       setPoints(points+100);
@@ -27,7 +26,7 @@ const StepsScreen = ({navigation}: Props) => {
 
     const subscription = RNShake.addListener(() => {
       dispatch(increment());
-      dispatch(decrement());
+
     });
     return () => {
       subscription.remove();
@@ -39,12 +38,11 @@ const StepsScreen = ({navigation}: Props) => {
       <Header>Daily Step Tracker</Header>
       <StyledIcon icon={faPersonRunning} size={50}/>
       <Steps steps={steps} title={'Today steps'} color={'green'} textColor={"black"}/>
-        <StyledIcon icon={ faShoePrints } size={50} />
-        <Steps steps={remainingSteps} title={'Remainig steps'} color={'red'} textColor={"black"}/>
-        {steps >= 5 && (
+
+        {steps >= 2 && (
           <Button
-           onPress={() => navigation.navigate('Prize')}>
-            <BtnText>Points</BtnText>
+           onPress={() => navigation.navigate('Prize',{ points:points})}>
+            <BtnText>Rewards</BtnText>
           </Button>
         )}
       </OuterView>

@@ -19,6 +19,7 @@ import Weather from './src/pages/Weather';
 import {Provider} from 'react-redux';
 import CheckConnection from './src/utilis/CheckConnetion';
 import ErrorCard from './src/components/ErrorCard';
+import HomePage from './src/pages/HomePage';
 
 
 
@@ -34,9 +35,9 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
-            component={Home}
+            component={HomePage}
             // options={{headerShown: false}}
-          />
+            />
           <Stack.Screen
             name="StepsScreen"
             component={StepsScreen}
