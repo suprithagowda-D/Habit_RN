@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import Card from '../components/Card';
+import Card from '../components/StepTracker/Card';
 import {ViewContainer} from '../styles/index.style';
 
 type Props = {
@@ -9,7 +9,6 @@ type Props = {
 };
 
 const Prize = ({route}: Props) => {
-  console.log("Prize",route.params);
   const steps = useSelector(state => state.step.value);
   return (
     <ViewContainer>

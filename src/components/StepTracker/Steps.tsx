@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-} from 'react-native';
-import {SubTitle,Circle,StepsCount,StyledScrollView} from '../styles/index.style';
+
+import {Circle,StepsCount,StyledScrollView} from './Stepper.style';
 
 type Props = {
   steps: number;
@@ -16,7 +13,7 @@ const Steps: React.FC<Props> = ({steps,title,color,textColor}) => {
 
       <StyledScrollView>
         <Circle inputColor={color} >
-          <StepsCount>{steps}</StepsCount>
+          <StepsCount testID="steps_id">{steps}</StepsCount>
         </Circle>
       </StyledScrollView>
 

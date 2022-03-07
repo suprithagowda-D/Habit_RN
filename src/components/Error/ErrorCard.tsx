@@ -1,14 +1,13 @@
 import React from "react";
 import { View } from "react-native";
-import { ErrorContainer, ErrorHead, ErrorSubText,TextContainer,ErrorImage } from "../styles/index.style";
-
+import { ErrorContainer, ErrorHead, ErrorSubText,TextContainer,ErrorImage } from "./Error.style";
 
 
 const ErrorCard = () => {
     return (
         <ErrorContainer>
           <View>
-            <ErrorImage source={require('../images/internetError.png')} />
+            <ErrorImage source={require('../../images/internetError.png')} />
            </View>
           <TextContainer>
             <ErrorHead >Connection Error</ErrorHead>

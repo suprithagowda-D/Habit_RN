@@ -1,6 +1,7 @@
 import React from "react";
-import {  ViewContainer} from "../styles/index.style";import Weather from "./Weather";
-import StepsScreen from "./StepsScreen";
+import { ViewContainer } from "../styles/index.style";
+import Weather from "../components/Weather/WeatherScreen";
+import StepsScreen from "../components/StepTracker/StepsScreen";
 
 
 type Props = {

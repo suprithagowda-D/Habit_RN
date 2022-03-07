@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { WeatherContainer, Main } from "../styles/index.style";
-import WeatherInfo from "../components/WeatherInfo";
-import WeatherDetails from "../components/WeatherDetails";
+import { WeatherContainer, Main } from "./Weather.style";
+import WeatherInfo from "./WeatherInfo";
+import WeatherDetails from "./WeatherDetails";
 import Geolocation from "@react-native-community/geolocation";
 import { ImageBackground, View } from "react-native";
-import StepsScreen from "./StepsScreen";
+import StepsScreen from "../StepTracker/StepsScreen";
 
 const BASE_WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?";
 const API_KEY = "a1bb12ecfc26d19c7bc083e087ea9e10";
@@ -41,7 +41,7 @@ const Weather = () => {
   return (
     <WeatherContainer>
       <ImageBackground
-        source={require("../images/weather.jpeg")}
+        source={require("../../images/weather.jpeg")}
         resizeMode="cover"
         style={{ width: "100%", height: "100%" }}
       >

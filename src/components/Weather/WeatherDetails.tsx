@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native'
-import {WeatherDetailsView,WeatherDetailsRow1,SubText,WeatherDetailsRow,WeatherDetailsItems,WeatherDetailsText} from '../styles/index.style';
+import {WeatherDetailsView,WeatherDetailsRow1,SubText,WeatherDetailsRow,WeatherDetailsItems,WeatherDetailsText} from './Weather.style';
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faTemperatureHalf, faGaugeHigh, faWind, faDroplet, } from '@fortawesome/free-solid-svg-icons';
 
@@ -46,7 +46,7 @@ const WeatherDetails: React.FC<Props> = ({currentWeatherDetails}) => {
             <FontAwesomeIcon icon={ faGaugeHigh } size={30} />
                 <WeatherDetailsItems>
                     <SubText>Pressure :</SubText>
-                    <WeatherDetailsText>{pressure}</WeatherDetailsText>
+                    <WeatherDetailsText testID="feelsLike_id">{pressure}</WeatherDetailsText>
                 </WeatherDetailsItems>
             </WeatherDetailsRow>
         </WeatherDetailsRow1>
