@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import Card from '../components/StepTracker/Card';
-import {ViewContainer} from '../styles/index.style';
+import {ViewContainer} from '../common/styles/index.style';
 
 type Props = {
   route:any;

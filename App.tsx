@@ -9,19 +9,17 @@
  */
 
 import React from 'react';
-import StepsScreen from './src/pages/StepsScreen';
+import StepsScreen from './src/components/StepTracker/StepsScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Prize from './src/pages/Prize';
+import Reward from './src/pages/RewardScreen';
 import store from './src/store/store';
-import Home from './src/pages/Home';
-import Weather from './src/pages/Weather';
+import Weather from './src/components/Weather/WeatherScreen';
 import {Provider} from 'react-redux';
 import CheckConnection from './src/utilis/CheckConnetion';
-import ErrorCard from './src/components/ErrorCard';
-import HomePage from './src/pages/HomePage';
-
-
+import ErrorCard from './src/components/Error/ErrorCard';
+import HomePage from './src/pages/HomeScreen';
+import {Text} from "react-native";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -31,22 +29,25 @@ const App = () => {
   }
   return (
     <Provider store={store}>
+      <Text  testID="stepOne">
+     Step One
+      </Text>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
             component={HomePage}
-            // options={{headerShown: false}}
+
             />
           <Stack.Screen
             name="StepsScreen"
             component={StepsScreen}
-            // options={{headerShown: false}}
+
           />
           <Stack.Screen
-            name="Prize"
-            component={Prize}
-            options={{ title: 'Prize Screen' }}
+            name="Reward"
+            component={Reward}
+            options={{ title: 'Reward' }}
           />
           <Stack.Screen
             name="Weather"

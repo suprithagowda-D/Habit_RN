@@ -1,5 +1,5 @@
 import React from "react";
-import { ViewContainer } from "../styles/index.style";
+import { ViewContainer } from "../common/styles/index.style";
 import Weather from "../components/Weather/WeatherScreen";
 import StepsScreen from "../components/StepTracker/StepsScreen";
 
