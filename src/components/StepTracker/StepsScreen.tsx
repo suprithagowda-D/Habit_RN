@@ -21,14 +21,14 @@ type Props = {
 };
 
 const StepsScreen = ({ navigation }: Props) => {
-  const [points, setPoints] = useState<number>(0);
+  const [points, setPoints] = useState<number>(100);
   const steps = useSelector((state) => state.step.value);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (steps === 5) {
+    if (steps == 5) {
+    navigation.navigate("Reward", { points: points });
       setPoints(points + 100);
-      navigation.navigate("Reward", { points: points });
     }
 
     const subscription = RNShake.addListener(() => {
@@ -51,7 +51,7 @@ const StepsScreen = ({ navigation }: Props) => {
         />
         <Button
           testID="reward_btn"
-          onPress={() => navigation.navigate("Reward", { points: points })}
+          onPress={() => navigation.navigate("Reward", { points: 100 })}
         >
           <BtnText>Rewards</BtnText>
         </Button>

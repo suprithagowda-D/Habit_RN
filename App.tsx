@@ -20,6 +20,8 @@ import CheckConnection from './src/utilis/CheckConnetion';
 import ErrorCard from './src/components/Error/ErrorCard';
 import HomePage from './src/pages/HomeScreen';
 import {Text} from "react-native";
+import StorybookUI from './storybook';
+import Config from 'react-native-config';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -35,7 +37,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Home"
+            name="Health"
             component={HomePage}
 
             />
@@ -60,4 +62,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App ;

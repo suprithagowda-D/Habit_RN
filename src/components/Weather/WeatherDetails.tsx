@@ -46,7 +46,7 @@ const WeatherDetails: React.FC<Props> = ({currentWeatherDetails}) => {
             <FontAwesomeIcon icon={ faGaugeHigh } size={30} />
                 <WeatherDetailsItems>
                     <SubText>Pressure :</SubText>
-                    <WeatherDetailsText testID="feelsLike_id">{pressure}</WeatherDetailsText>
+                    <WeatherDetailsText testID="pressure_id">{pressure}</WeatherDetailsText>
                 </WeatherDetailsItems>
             </WeatherDetailsRow>
         </WeatherDetailsRow1>

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "center",
+        "paddingBottom": 30,
+      },
+    ]
+  }
+>
+  <View>
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/images/internetError.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "align": "center",
+            "height": 200,
+            "width": 200,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 18,
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      Connection Error
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 16,
+            "fontWeight": "500",
+            "paddingHorizontal": 50,
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Please check your network connectivity and try again
+    </Text>
+  </View>
+</View>
+`;
